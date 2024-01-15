@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background: lightgray;
+  text-align: center;
+  font-family: sans-serif;
+  color: #fefefe;
+}
+.container {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+
+
+.carousel__face:nth-child(1) {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWf6_xerKq00U9hyEXd8xXMQpI8MdV1IdIlg&usqp=CAU");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+  background-image: url("https://media.wnyc.org/i/1860/1313/l/80/2023/04/JonMajors.jpg");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("https://t3.ftcdn.net/jpg/04/73/92/88/360_F_473928819_4OFdLyjOdWog4lUQpa9CfcSZMkj2FeB9.jpg");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("https://www.shutterstock.com/image-photo/young-african-american-man-holding-600nw-2048211917.jpg");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+  background-image: url("https://s3.amazonaws.com/cms.ipressroom.com/173/files/20211/603767f82cfac26fdf6354e9_Hidden+costs+of+being+black/Hidden+costs+of+being+black_mid.jpg");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+  background-image: url("https://st2.depositphotos.com/1715570/5435/i/450/depositphotos_54357273-stock-photo-smiling-black-man-posing-with.jpg");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+  background-image: url("https://imageio.forbes.com/specials-images/imageserve/1165425269//960x0.jpg?format=jpg&width=960");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmA00b6QfZNSnWoumPFG9JerMtekAjq2UG-w&usqp=CAU");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("https://cdn.openart.ai/uploads/image_XO_NgNGJ_1700738325221_raw.jpg");
+  transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
